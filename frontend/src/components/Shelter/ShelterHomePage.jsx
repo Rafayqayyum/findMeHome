@@ -16,7 +16,7 @@ const ShelterHomePage = () => {
     <div className="flex flex-col w-[100%]">
       <nav className="fixed -ml-[33px] bg-[#EFEEF1] z-50 w-full px-8">
         <div className="flex justify-between items-center py-3">
-          <a href="#top" className="w-[180px]">
+          <a href="/" className="w-[180px]">
             <img src={logo} alt="logo"/>
           </a>
           <ul className="flex space-x-10 underline-offset-4 decoration-[#70CF36] text-[#7F99A2] uppercase font-[700] text-[20px]">
@@ -71,7 +71,7 @@ const ShelterHomePage = () => {
       <div className={"mt-12"}>
         <div className={"flex flex-wrap justify-center items-center"}>
           {map(dogs,dog=>{
-            return <ShelterDogCard  key={dog.did} dog={dog} name={dog.dname} age={dog.age} breed={breeds[dog.bid].bname} dogImg={dog.imageurl} did={dog.did} type={user.type==="adopter"?"see more":""}/>;
+            return <ShelterDogCard  key={dog.did} dog={dog} name={dog.dname} age={dog.age} breed={breeds[dog.bid-1].bname} dogImg={dog.imageurl} did={dog.did} type={user.type==="adopter"?"see more":""}/>;
           })}
         </div>
          </div>

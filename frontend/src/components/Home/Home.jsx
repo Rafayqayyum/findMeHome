@@ -1,4 +1,3 @@
-//https://i.ibb.co/6skvT57/profile-pic.png
 import dancingDog from '../../assets/gif/dancingDog.gif'
 import logo from "../../assets/images/logo.png"
 import bg1 from "../../assets/images/bg1.jpg"
@@ -7,7 +6,6 @@ import {useSelector} from "react-redux";
 import FeaturedDogs from "../Dog/FeaturedDogs";
 import DogArticles from "../Article/DogArticles";
 import Footer from "./Footer";
-import {useState} from "react";
 
 const Home = () => {
     const user = useSelector(state => state.dogStore.user);
@@ -18,13 +16,10 @@ const Home = () => {
                     <img src={logo} alt="logo"/>
                 </a>
                 <ul className="flex space-x-10 underline-offset-4 decoration-[#70CF36] text-[#7F99A2] uppercase font-[700] text-[20px]">
-                    <li className="underline text-[#3E665C]">Home</li>
-                    <li className="hover:text-[#3E665C]">Blog</li>
-                    <li className="hover:text-[#3E665C]">About Us</li>
-                    <li className="hover:text-[#3E665C]"><a href="/bc">Breed</a></li>
-                    <li className="hover:text-[#3E665C]"><a href="/logout">Log Out</a></li>
-                    {/*<li><img title={user.username} className="h-[33px]" src="https://i.ibb.co/s5nT3Mg/profile-img.png"*/}
-                    {/*         alt="user profile"/></li>*/}
+                    <li className="underline text-[#3E665C] cursor-pointer">Home</li>
+                    <li className="hover:text-[#3E665C] cursor-pointer">Blog</li>
+                    <li className="hover:text-[#3E665C] cursor-pointer">About Us</li>
+                    <li className="hover:text-[#3E665C] cursor-pointer"><a href="/bc">Breed</a></li>
                 </ul>
             </div>
         </nav>
@@ -47,7 +42,7 @@ const Home = () => {
                                     FInd Me Home is The online Dog adoption Website where people who want to adopt a Dog connect with shelters.
                                 </p>
                                 <div className="relative ">
-                                    <div className="absolute left-5 top-4 w-[189px] space-y-5 font-bold">
+                                    <div className="absolute left-5 -top-2 w-[189px] space-y-5 font-bold">
                                         <a href="/login"
                                            className="rounded-[30px] block bg-[#3E665C] text-center hover:bg-[#5A8081] py-[15px] px-[20px] text-[16px] font-bold uppercase text-white">
                                             Log In
@@ -55,6 +50,10 @@ const Home = () => {
                                         <a href="/signup"
                                            className="rounded-[30px] block bg-[#3E665C] text-center hover:bg-[#5A8081]  py-[15px] px-[20px] text-[16px] font-bold uppercase text-white">
                                             Sign up
+                                        </a>
+                                        <a href="/bc"
+                                           className="rounded-[30px] block bg-[#3E665C] text-center hover:bg-[#5A8081]  py-[15px] px-[20px] text-[16px] font-bold uppercase text-white">
+                                            Check Breed
                                         </a>
                                     </div>
                                 </div>

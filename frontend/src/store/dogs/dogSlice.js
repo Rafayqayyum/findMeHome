@@ -9,8 +9,6 @@ import {
     getUserURL
 } from "../../utils/EndPoints";
 import {map} from "lodash";
-// import {forEach} from "lodash";
-
 
 const dogSlice = createSlice({
     name: "Dog",
@@ -28,7 +26,6 @@ const dogSlice = createSlice({
     },
     reducers: {
         breedResult(state, action) {
-            console.log("BREED RESULT");
             const {name, breed, image, age} = action.payload;
             if (name) state.dog.name = name;
             if (breed) state.dog.breed = breed;
@@ -36,31 +33,24 @@ const dogSlice = createSlice({
             if (age) state.dog.age = age;
         },
         breedsReceived(state, action) {
-            console.log("BREEDS RECEIVED");
             state.breeds = action.payload;
         },
         diseasesReceived(state, action) {
-            console.log("DISEASES RECEIVED");
             state.diseases = action.payload;
         },
         userReceived(state, action) {
-            console.log("USER RECEIVED");
             state.user = action.payload;
         },
         featuredDogsReceived(state, action) {
-            console.log("FEATURED DOGS RECEIVED")
             state.featuredDogs = action.payload
         },
         shelterReceived(state, action) {
-            console.log("SHELTER RECEIVED");
             state.shelter = action.payload;
         },
         dogsReceived(state,action){
-            console.log("DOGS RECEIVED");
             state.dogs=action.payload;
         },
         dogDiseasesReceived(state,action){
-            console.log("DOG DISEASES RECEIVED");
             const objs=action.payload;
             const diseases=[];
             map(objs,obj=>{
@@ -68,7 +58,6 @@ const dogSlice = createSlice({
             })
             state.dogDiseases=diseases;
         },dogInfoReceived(state,action){
-            console.log("DOG INFO RECEIVED");
             state.dogInfo=action.payload;
         }
     }
